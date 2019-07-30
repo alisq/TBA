@@ -1,4 +1,14 @@
 body {
     background:#000;
     color:#FFF;
+    font-family:helvetica;
+}
+
+.📖-root #content {
+	color:#000;
+	font-size:36px;
+}
+
+h4 {
+	font-weight:normal;
 }
