@@ -10,11 +10,26 @@ body {
 
 .📖-root #content {
 	
-	font-size:26px;
+	font-size:14pt;
+	line-height:16.8pt;
+}
+
+
+.📖-root .w13 {
+	width:calc( 0.25in * 13)
+}
+
+.📖-root .l5 {
+	margin-left:calc(0.25in * 5);
 }
 
 .📖-root .r22 {
 	transform:rotate(22deg);
+}
+
+.big {
+	font-size:28pt;
+	line-height: 31pt;
 }
 
 
