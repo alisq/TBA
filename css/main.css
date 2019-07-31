@@ -17,6 +17,22 @@ body {
 	transform:rotate(22deg);
 }
 
+
+.📖-left>.📖-page-background {
+    left: 0;
+    background: url(../img/schematic.gif) no-repeat;
+    background-size: auto 8.5in;
+    background-position: 0% 15px;
+}
+
+
+.📖-right>.📖-page-background {
+    left: 0;
+    background: url(../img/schematic.gif) no-repeat;
+    background-size: auto 8.5in;
+    background-position: 103% 15px;
+}
+
 /*h4 {
 	font-weight:normal;
 }*/

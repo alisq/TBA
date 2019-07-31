@@ -15,7 +15,7 @@ $('#makeBook').click(function(){
 
   pageSetup: {	
     size: { width: '5.5in', height: '8.5in' },
-    margin: { top: '12pt', inner: '12pt', outer: '16pt', bottom: '20pt' },
+    margin: { top: '0.375in', inner: '0pt', outer: '0.375in', bottom: '0.375in' },
   },
   printSetup: {
   	layout: Bindery.Layout.BOOKLET,
