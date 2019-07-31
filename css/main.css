@@ -4,11 +4,19 @@ body {
     font-family:helvetica;
 }
 
-.📖-root #content {
+.📖-root {
 	color:#000;
-	font-size:36px;
 }
 
-h4 {
-	font-weight:normal;
+.📖-root #content {
+	
+	font-size:26px;
 }
+
+.📖-root .r22 {
+	transform:rotate(22deg);
+}
+
+/*h4 {
+	font-weight:normal;
+}*/
