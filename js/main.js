@@ -1,16 +1,31 @@
 $(document).ready(function(){
 
+
+  $(".title").click(function(){
+    $("li.active").removeClass("active");
+    $(this).parent("li").addClass("active");
+  })
+
+  $(".active .open-close").click(function(){
+    alert("f")
+    $("li.active").removeClass("active");
+  })
+
 let runningHeaders = Bindery.RunningHeader({
   render: (page) => page.isLeft
     ? `${page.number} · TOOLS FOR LEARNING`
     : `Hera Büyüktaşcıyan · ${page.number}`
 });
 
-$('#makeBook').click(function(){
-	$(this).remove()
+$('.makeBook').click(function(){
+    //$("#web #content").css("display","block")
+    
+    id = $(this).parent("li").attr("id");
+
+	  $(this).remove()
 
 	Bindery.makeBook({
-  content: '#content',
+  content: "#"+id+' .contents',
   view: Bindery.View.PREVIEW,
 
   pageSetup: {	

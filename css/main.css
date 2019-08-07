@@ -1,17 +1,77 @@
 body {
-    background:#000;
-    color:#FFF;
-    font-family:helvetica;
+    background:#FBB42B;
+    color:#000;
+    font-family:"Prestige Elite Std", "courier", monospace;
+    font-size:24px;
 }
+
+#menu {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+
+}
+
+#menu li {
+    border-bottom:1px solid #000;    
+    height:3em;
+    max-height: 3em;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
+}
+
+#menu li:hover {
+    background:black;
+    color:#FBB42B;
+
+}
+
+#menu li.active {
+    height:auto;
+    max-height: 2500px;
+    transition: max-height 0.25s ease-in;
+
+}
+
+.open-close {float:right; cursor:pointer;}
+.open-close:before { content:"\02c7"; }
+.active .open-close:before { content:"\00d7"; }
+
+
+#menu li.active:hover {
+    color:black;
+    background:#FBB42B;
+}
+
+
+#menu li .title {
+    padding:1em;
+}
+
+.contents {
+    /*min-height:500px;*/
+    margin:0 1em 1em 1em;
+}
+
+
+#web #content {
+    display:none;
+}
+
+.TBA-logo {
+    max-width:200px;
+}
+
 
 .📖-root {
 	color:#000;
 }
 
 .📖-root #content {
-	
+	color:#000;
 	font-size:14pt;
 	line-height:16.8pt;
+
 }
 
 
