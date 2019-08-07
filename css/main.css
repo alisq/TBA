@@ -9,6 +9,7 @@ body {
     list-style-type: none;
     margin:0;
     padding:0;
+    margin-top:calc(3em + 1px);
 
 }
 
@@ -18,11 +19,26 @@ body {
     max-height: 3em;
     transition: max-height 0.15s ease-out;
     overflow: hidden;
+
+}
+
+#intro {
+    position:fixed;
+    top:0;
+    width:calc(100% - 20px);
+    background:#FBB42B;
+    z-index:10;
 }
 
 #menu li:hover {
     background:black;
     color:#FBB42B;
+
+}
+
+#menu li.no-click:hover {
+    color:black;
+    background:#FBB42B;
 
 }
 
@@ -49,17 +65,14 @@ body {
 }
 
 .contents {
-    /*min-height:500px;*/
     margin:0 1em 1em 1em;
+
 }
 
-
-#web #content {
-    display:none;
-}
 
 .TBA-logo {
-    max-width:200px;
+    max-width:150px;
+    margin:1em;
 }
 
 
