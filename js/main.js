@@ -2,13 +2,19 @@ $(document).ready(function(){
 
 
   $(".title").not(".no-click").click(function(){
-    $("li.active").removeClass("active");
-    $(this).parent("li").addClass("active");
+
+    if ( !$(this).parent("li").hasClass("active") ) {
+          $("li.active").removeClass("active");
+
+          $(this).parent("li").addClass("active");
+    }
+    
   })
 
   $(".active .open-close").click(function(){
-    alert("f")
-    $("li.active").removeClass("active");
+    setTimeout(function(){
+    $(".active").removeClass("active");
+  },25)
   })
 
 let runningHeaders = Bindery.RunningHeader({

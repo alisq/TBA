@@ -3,6 +3,7 @@ body {
     color:#000;
     font-family:"Prestige Elite Std", "courier", monospace;
     font-size:24px;
+    min-height:100vh;
 }
 
 #menu {
@@ -69,10 +70,31 @@ body {
 
 }
 
+.makeBook {
+    font-family:inherit;
+    font-size:25px;
+    color:#FFFFFF;
+    background:#EC008C;
+    border:1px solid #000;
+    padding:0.75em;
+    margin:0 1em 1em;
+}
+
+.makeBook:hover {
+    background:black;
+    color:#FBB42B;
+    
+}
+
+
+#hera .title {
+    color:#EC008C;
+}
 
 .TBA-logo {
     max-width:150px;
     padding:0 1em;
+    
 }
 
 
