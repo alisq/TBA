@@ -75,9 +75,15 @@ body {
     font-size:25px;
     color:#FFFFFF;
     background:#EC008C;
-    border:1px solid #000;
-    padding:0.75em;
-    margin:0 1em 1em;
+    border-radius:50%;
+    width:150px;
+    height:150px;
+    transform:rotate(22deg);
+    cursor:pointer;
+    float:right;
+    position:relative;
+    right:10em;
+    top:-10em;
 }
 
 .makeBook:hover {

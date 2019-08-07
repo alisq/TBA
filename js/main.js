@@ -24,7 +24,7 @@ let runningHeaders = Bindery.RunningHeader({
 });
 
 $('.makeBook').click(function(){
-    //$("#web #content").css("display","block")
+    $("#web").css("display","none");
     
     id = $(this).parent("li").attr("id");
 
