@@ -72,7 +72,7 @@ body {
 
 .makeBook {
     font-family:inherit;
-    font-size:25px;
+    font-size:24px;
     color:#FFFFFF;
     background:#EC008C;
     border-radius:50%;
@@ -110,7 +110,7 @@ body {
 
 .📖-root #content {
 	color:#000;
-	font-size:14pt;
+	/*font-size:14pt;*/
 	line-height:16.8pt;
 
 }
@@ -129,7 +129,7 @@ body {
 }
 
 .big {
-	font-size:28pt;
+	/*font-size:28pt;*/
 	line-height: 31pt;
 }
 
