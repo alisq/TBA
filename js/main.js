@@ -85,7 +85,7 @@ Papa.parse(url, {
 let runningHeaders = Bindery.RunningHeader({
   render: (page) => page.isLeft
     ? `${page.number} · TOOLS FOR LEARNING`
-    : `${artist} · ${page.number}`
+    : `${$( "#"+id+' .title').text()} · ${page.number}`
 });
 
 $('.makeBook').click(function(){
