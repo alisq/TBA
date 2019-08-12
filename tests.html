@@ -32,17 +32,19 @@
 
         	url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR_ndDOt_GpWtoIL3r5EZBOvrIMLi7MQMcPJ8S8wtbFUIe-6hHvpOxvhaAEerWHMw/pub?gid=744057368&single=true&output=csv"
 
-console.log(Papa.parse(d));
+
+
+Papa.parse(url, {
+	download: true,
+	header: true,
+        complete: function(results) {
+            console.log(results)
+        }
+})
 
 
 
-        	$.ajax({
-        		url:url,
-        		dataType:"text",
-        		success:function(d) {
-        			//console.log(Papa.parse(d));
-        		}
-        	})
+
 
         </script>
     </body>

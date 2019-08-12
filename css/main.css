@@ -149,6 +149,12 @@ body {
     background-position: 103% 15px;
 }
 
+
+.thumbnail {
+    margin:3em auto 1em;
+    max-width:500px;
+}
+
 /*h4 {
 	font-weight:normal;
 }*/
