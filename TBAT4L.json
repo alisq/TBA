@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "tba-tools-for-learning",
+  "private_key_id": "933db1b968ac5a8b604578967fbfa0dc4b9ecca7",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCmi+EejVgPalWq\nfAQSnUIXM9JOSJHg+xc8IFWOv2pXM/w+9M/MwafIaFXYI9bW41tg0RoXLy9vRGTV\nKY8dB61Th8mlYdAUl7sOUKapy9Yh9xc12y7wiOj2W9UMvfdGf2iEgLqebm137C4k\na1vdyP5UEWl9ZnQb80AfmDeBWhEhqZxqejpk3fVB5uOPiLZo5gA8FYJR9lDw8rb5\nYflEekqtB2c5UAUU1Pn+REbb+cTYzbxOIAF0ZwQOhnNYNcEffX/xNYqgUHkt1+NJ\nmHg6hubYS/9q5LHUuTxza4aqeIzlg1kG08mU4l/PGQI6K2Ebab+lx5x21jcOMF3K\nxbZQ/P+VAgMBAAECggEADekRWKMXRP5YK7ZSWW2qF1RcOe6kxI+kTVYpXz63S+j1\n0MT+KuIijezCUscM4C463ndzQEF61ZvMTOOSO6tS+5mUADdkZlFAAz49lWFcQBeq\naB9SUy5+6r4ZKYh1A/3gmxnsvGPedSLpvbVRMHvjsN4yxecN8UcGxudzUgoASU6F\nz6lmkEKuSPezfvm0xvUJcN9xIriD3QpLSWLNoBz/flw36Md9MgXH1FT1fPEqXGSj\n0sjgcFgNenegaI8DjPiYC/jWacD3kLjZWciRpOQheWRFZfyOldpp7PovtW1PyO/C\nWvLHXUZaEyiPfEXYuUS5MRcXaJx7iViD2s1y1dKhtwKBgQDmTG6mPrcQEQtA+zRc\nwLjmYaSmHzSVGSFt2tESPb/pDCBiLcOe9s7Ys0/ADjHU361YRdfcDpfL+dyqzMY6\ngStpn0EJ3xX+Ti7KKIqYRcX3/TgWCQtg77ZuErhxyd4Yb/Br7vKHT//AdiTS0QLY\nj1n0fzMLhe9h4LpeNAKQ3+2kswKBgQC5IhCudM3gzaXue7xVsolDE17onYddCLS/\n6swoK49RlAIH+9rQeZDH1AbASUm6SeEQihusxdcNn01KOzl0/NT5ahm+UBA5zYTB\njMe37q8w3iEuIHonyiyKk7vVhF5BMKLKS8c9wuIzZhTeiIwoNyAyBIscfrMNvmB3\nzIQCyBy+lwKBgQCy17w94gorsfC5X9tEBG4SitVgJG+jMcbiFsGxlr6H7mDfnYaC\n1ku/wVA3Z06Pb7ygBm0heTusrbcN9MQj/teFyKSrU9EykeiIGX+3zMd2U/DQO+nY\nN4/GX0dZJlkRRSzBxOgW6KtF/PmPtbyuDHThCD7Nvg8uRWS1b1Jmy18zPQKBgDKy\npHTR4ctNJcKQOfwR30ryFAyJjxcoGi9wQiZB/4ZsjL3Y94wdrks6wfqIV1tfffXE\njF2c9A5z8HuCinKCBmSi7JfUXw0lPdSvE8ZH48vzGI0EMc+Rqu7sFAUdsZ4SjpHt\nfItqQf2nV9G0/QTKS9PGsL3F6Iy79Lj51bDZUh3TAoGBANI3qaQ63jZNKVtXLv9m\nwEQONtk19+vJBiIf7kR0UfN/g+wK7FTei0JXaToIjU7UK96MharL9ScxtujMDTU4\ni7luqCZlydoEZGi0EbpuCXdh/AakH+VDKkPw/V1eguHnfUz17+4M1nqCqLOfjRD1\nuVDZV9eyIpYxYDQQt/+k8AwJ\n-----END PRIVATE KEY-----\n",
+  "client_email": "tba-302@tba-tools-for-learning.iam.gserviceaccount.com",
+  "client_id": "112470375737162112321",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tba-302%40tba-tools-for-learning.iam.gserviceaccount.com"
+}
