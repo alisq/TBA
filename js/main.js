@@ -21,19 +21,18 @@ Papa.parse(url, {
               var contents = $("<div class='contents'></div>")
 
               contents
-                  .append("<div class='workTitle'>"+results.data[i].WorkTitle+'</div>')
-                  .append("<div class='medium'>"+results.data[i].Medium+'</div>')
-                  .append("<div class='location'>"+results.data[i].Location+'</div>')
+                  .append("<h4 class='workTitle'>"+results.data[i].WorkTitle.replace(/(?:\r\n|\r|\n)/g, '<br>')+'</h4>')
+                  .append("<div class='medium'>"+results.data[i].Medium.replace(/(?:\r\n|\r|\n)/g, '<br>')+'</div>')
+                  .append("<div class='location'>"+results.data[i].Location.replace(/(?:\r\n|\r|\n)/g, '<br>')+'</div>')
                   .append(img)
+                  .append("<p class='caption'>"+results.data[i].ThumbnailCaption.replace(/(?:\r\n|\r|\n)/g, '<br>')+'</div>')
 
-                  .append("<div class='thumbnailCaption'>"+results.data[i].ThumbnailCaption+'</div>')
+                  .append("<div class='projectDescription'>"+results.data[i].ProjectDescription.replace(/(?:\r\n|\r|\n)/g, '<br>')+'</div>')
+                  .append("<div class='toolTitle'>"+results.data[i].ToolTitle.replace(/(?:\r\n|\r|\n)/g, '<br>')+'</div>')
+                  .append("<div class='toolText'>"+results.data[i].ToolText.replace(/(?:\r\n|\r|\n)/g, '<br>')+'</div>')
+                  .append("<div class='qsAndStarters'>"+results.data[i]["Questions and Conversation Starters"].replace(/(?:\r\n|\r|\n)/g, '<br>')+'</div>')
 
-                  .append("<div class='projectDescription'>"+results.data[i].ProjectDescription+'</div>')
-                  .append("<div class='toolTitle'>"+results.data[i].ToolTitle+'</div>')
-                  .append("<div class='toolText'>"+results.data[i].ToolText+'</div>')
-                  .append("<div class='qsAndStarters'>"+results.data[i]["Questions and Conversation Starters"]+'</div>')
-
-                  .append("<div class='curricularConnections'>"+results.data[i].CurricularConnections+'</div>')
+                  .append("<div class='curricularConnections'>"+results.data[i].CurricularConnections.replace(/(?:\r\n|\r|\n)/g, '<br>')+'</div>')
 
 
 
@@ -52,15 +51,17 @@ Papa.parse(url, {
           $("li.active").removeClass("active");
 
           $(this).parent("li").addClass("active");
+    } else {
+      $("li.active").removeClass("active");
     }
     
   })
 
-  $(".active .open-close").click(function(){
-    setTimeout(function(){
-    $(".active").removeClass("active");
-  },25)
-  })
+  // $(".active .open-close").click(function(){
+  //   setTimeout(function(){
+  //   $(".active").removeClass("active");
+  // },25)
+  // })
 
 
 
