@@ -2,40 +2,6 @@
 <html class="no-js" lang="">
     <head>
 
-https://docs.google.com/spreadsheets/d/e//pub?output=csv
-
-  
-
-  https://spreadsheets.google.com/feeds/list/2PACX-1vR_ndDOt_GpWtoIL3r5EZBOvrIMLi7MQMcPJ8S8wtbFUIe-6hHvpOxvhaAEerWHMw/od6/public/values?alt=json-in-script&callback=      
-        <?php 
-
-
-            // require_once 'vendor/autoload.php'; 
-            // $client = new \Google_Client();
-            // $client->setApplicationName('TBA - Tools for Learning');
-            // $client->setScopes([\Google_Service_Sheets::SPREADSHEETS]);
-            // $client->setAccessType('offline');
-            // $client->setAuthConfig(__DIR__ . '/TBAT4L.json');
-            // $service = new Google_Service_Sheets($client);
-            // $spreadsheetId = "14mLhk9stYNqQvmPoE0JGhlciPvLibUGa";
-            
-            // $range = 'Artist_Tools';
-            // $response = $service->spreadsheets_values->get($spreadsheetId, $range);
-            // $values = $response->getValues();
-            // if (empty($values)) {
-            //    print 'No data found.\n';
-            // } else {
-            //    foreach ($values as $row) {
-            //       for ($i = 0; $i < sizeof($row); $i++) {
-            //           echo $row[$i].'\n';
-            //       }
-            //    }
-            // }
-
-
-        ?>
-
-
 
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -157,12 +123,55 @@ console.log("f")
 
 
 
-            sheetUrl = "https://cors.io/spreadsheets.google.com/feeds/cells/14mLhk9stYNqQvmPoE0JGhlciPvLibUGa/1/od6/public/full?alt=json";
+            //https://spreadsheets.google.com/feeds/cells/14mLhk9stYNqQvmPoE0JGhlciPvLibUGa/1/od6/public/full?alt=json";
+
+sheetUrl = "https://cors.io/spreadsheets.google.com/feeds/worksheets/2PACX-1vR_ndDOt_GpWtoIL3r5EZBOvrIMLi7MQMcPJ8S8wtbFUIe-6hHvpOxvhaAEerWHMw/public/basic?alt=json&callback=myCallback";
+
+console.log("1");
+$.ajax({
+    dataType: "jsonp",
+    url:sheetUrl,
+    success: function(data){
+  var entry = data.feed.entry;
+  
+  console.log(data);
+}
+})
 
 
-$.getJSON(sheetUrl, function(data){
+sheetUrl = "http://cors.io/spreadsheets.google.com/feeds/worksheets/2PACX-1vR_ndDOt_GpWtoIL3r5EZBOvrIMLi7MQMcPJ8S8wtbFUIe-6hHvpOxvhaAEerWHMw/public/basic?alt=json&callback=myCallback";
+
+
+console.log("2");
+$.ajax({
+    dataType: "jsonp",
+    url:sheetUrl,
+    success: function(data){
+  var entry = data.feed.entry;
+  
+  console.log(data);
+}
+})
+
+
+
+
+sheetUrl = "https://spreadsheets.google.com/feeds/worksheets/2PACX-1vR_ndDOt_GpWtoIL3r5EZBOvrIMLi7MQMcPJ8S8wtbFUIe-6hHvpOxvhaAEerWHMw/public/basic?alt=json&callback=myCallback";
+
+console.log("3");
+$.ajax({
+    dataType: "jsonp",
+    url:sheetUrl,
+    success: function(data){
   var entry = data.feed.entry;
   console.log(data);
+  
+  }, 
+  error: function(e) {
+    console.log(e)
+  }
+
+  
 })
         </script>
 
