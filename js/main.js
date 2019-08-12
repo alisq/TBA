@@ -15,30 +15,46 @@ Papa.parse(url, {
               
               console.log(results.data[i])
 
-              var img= $("<img class='thumbnail'>")
-                  .attr("src",results.data[i].Thumbnail.replace("open?","uc?"))
+              
+
+              var artist = results.data[i].ArtistName,
+              bio = results.data[i].ShortBio,
+              work = results.data[i].WorkTitle.replace(/(?:\r\n|\r|\n)/g, '<br>'),
+              medium = results.data[i].Medium.replace(/(?:\r\n|\r|\n)/g, '<br>'),
+              location = results.data[i].Location.replace(/(?:\r\n|\r|\n)/g, '<br>'),
+              img= $("<img class='thumbnail'>")
+                  .attr("src",results.data[i].Thumbnail.replace("open?","uc?")),
+              caption = results.data[i].ThumbnailCaption.replace(/(?:\r\n|\r|\n)/g, '<br>'),
+              desc = results.data[i].ProjectDescription.replace(/(?:\r\n|\r|\n)/g, '<br>'),
+              toolTitle = results.data[i].ToolTitle.replace(/(?:\r\n|\r|\n)/g, '<br>'),
+              toolText =  results.data[i].ToolText.replace(/(?:\r\n|\r|\n)/g, '<br>'),
+              questions = results.data[i]["Questions and Conversation Starters"].replace(/(?:\r\n|\r|\n)/g, '<br>'),
+              connections = results.data[i].CurricularConnections.replace(/(?:\r\n|\r|\n)/g, '<br>');
+
+
 
               var contents = $("<div class='contents'></div>")
 
               contents
-                  .append("<h4 class='workTitle'>"+results.data[i].WorkTitle.replace(/(?:\r\n|\r|\n)/g, '<br>')+'</h4>')
-                  .append("<div class='medium'>"+results.data[i].Medium.replace(/(?:\r\n|\r|\n)/g, '<br>')+'</div>')
-                  .append("<div class='location'>"+results.data[i].Location.replace(/(?:\r\n|\r|\n)/g, '<br>')+'</div>')
+                  .append("<p class='bio'>"+bio+'</p>')
+                  .append("<h4 class='workTitle'>"+work+'</h4>')
+                  .append("<div class='medium'>"+medium+'</div>')
+                  .append("<div class='location'>"+location+'</div>')
                   .append(img)
-                  .append("<p class='caption'>"+results.data[i].ThumbnailCaption.replace(/(?:\r\n|\r|\n)/g, '<br>')+'</div>')
+                  .append("<p class='caption'>"+caption+'</div>')
 
-                  .append("<div class='projectDescription'>"+results.data[i].ProjectDescription.replace(/(?:\r\n|\r|\n)/g, '<br>')+'</div>')
-                  .append("<div class='toolTitle'>"+results.data[i].ToolTitle.replace(/(?:\r\n|\r|\n)/g, '<br>')+'</div>')
-                  .append("<div class='toolText'>"+results.data[i].ToolText.replace(/(?:\r\n|\r|\n)/g, '<br>')+'</div>')
-                  .append("<div class='qsAndStarters'>"+results.data[i]["Questions and Conversation Starters"].replace(/(?:\r\n|\r|\n)/g, '<br>')+'</div>')
+                  .append("<div class='projectDescription'>"+desc+'</div>')
+                  .append("<div class='toolTitle'>"+toolTitle+'</div>')
+                  .append("<div class='toolText'>"+toolText+'</div>')
+                  .append("<div class='qsAndStarters'>"+questions+'</div>')
 
-                  .append("<div class='curricularConnections'>"+results.data[i].CurricularConnections.replace(/(?:\r\n|\r|\n)/g, '<br>')+'</div>')
+                  .append("<div class='curricularConnections'>"+connections+'</div>')
 
 
 
               $("<li></li>")
                 .attr("id","artist-"+i)
-                .append("<div class='title'>"+results.data[i].ArtistName+"<div class='open-close'></div></div>")
+                .append("<div class='title'>"+artist+"<div class='open-close'></div></div>")
                 .append(contents)
                 .append("<button class='makeBook'>print booklet</button>")
                 .appendTo("#menu")
@@ -69,7 +85,7 @@ Papa.parse(url, {
 let runningHeaders = Bindery.RunningHeader({
   render: (page) => page.isLeft
     ? `${page.number} · TOOLS FOR LEARNING`
-    : `Hera Büyüktaşcıyan · ${page.number}`
+    : `${artist} · ${page.number}`
 });
 
 $('.makeBook').click(function(){
