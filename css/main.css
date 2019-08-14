@@ -1,24 +1,69 @@
 body {
-    background:#FBB42B;
+    background:rgb(247,218,0);
     color:#000;
-    font-family:"Prestige Elite Std", "courier", monospace;
+    font-family:prestige-elite-std, courier, monospace;
     font-size:24px;
+    line-height:26px;
     min-height:100vh;
+}
+
+h1, h2 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0 0 1em 0;
+}
+
+h1 {
+text-align:right;
+}
+
+h1 span {
+    display:inline-block;
+    margin-right:13px;
+    transition:transform 0.4s;
+}
+
+#web {
+    display:grid;
+    /*grid-template-columns: 1fr 2fr;*/
+    margin:0 2em 0 6em;
+}
+
+#TBA-title,
+#T4L-title {
+    transform:rotate(90deg);
+    position:fixed;
+    background:red;
+    transform-origin: 0 0;
+    height:0;
+
+
+}
+
+
+#TBA-title {
+    left:4em;
+}
+
+#T4L-title {
+    left:2em;
+    top:50%;
 }
 
 #menu {
     list-style-type: none;
     margin:0;
     padding:0;
-    margin-top:calc(3em + 1px);
+    /*margin-top:calc(3em + 1px);*/
+    /*width:50%;*/
 
 }
 
 #menu li {
     border-bottom:1px solid #000;    
-    height:3em;
-    max-height: 3em;
-    transition: max-height 0.15s ease-out;
+    height:2em;
+    max-height: 2em;
+    transition: max-height 0.15s ease-out, height 0.15s ease-out;
     overflow: hidden;
 
 }
@@ -27,19 +72,19 @@ body {
     position:fixed;
     top:0;
     width:calc(100% - 20px);
-    background:#FBB42B;
+    background:rgb(247,218,0);
     z-index:10;
 }
 
 #menu li:hover {
     background:black;
-    color:#FBB42B;
+    color:rgb(247,218,0);
 
 }
 
 #menu li.no-click:hover {
     color:black;
-    background:#FBB42B;
+    background:rgb(247,218,0);
 
 }
 
@@ -50,19 +95,43 @@ body {
 
 }
 
-.open-close {float:right; cursor:pointer;}
+
+.punch {
+    position:fixed;
+    width:30px; height:30px;
+    border-radius:20px;
+    border:1px solid #000;
+    background:#000;
+    z-index:99;
+    cursor:pointer;
+}
+
+#punch1 { top:40px; left:40px; }
+#punch2 {top:50%; left:40px; transform:translateY(-140%);}
+#punch3 {top:50%; left:40px; transform:translateY(80%);}
+#punch4 { top:50%; transform:translateY(80%); left:calc(50% + 40px); }
+#punch5 { bottom:40px; left:calc(50% + 40px); }
+
+.open-close {
+    float:right; 
+    cursor:pointer;
+    font-size: 2em;
+    margin-top: 12px;
+}
+
+
 .open-close:before { content:"\02c7"; }
 .active .open-close:before { content:"\00d7"; }
 
 
 #menu li.active:hover {
     color:black;
-    background:#FBB42B;
+    background:rgb(247,218,0);
 }
 
 
 #menu li .title {
-    padding:1em;
+    padding:0.5em;
 }
 
 .contents {
@@ -88,7 +157,7 @@ body {
 
 .makeBook:hover {
     background:black;
-    color:#FBB42B;
+    color:rgb(247,218,0);
     
 }
 

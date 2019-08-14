@@ -1,9 +1,28 @@
 $(document).ready(function(){
 
 
+m = "";
+for(i=0;i<$("h1").text().split("").length;i++) {
+  m+="<span>"+$("h1").text().split("")[i]+"</span>";
+
+}
+
+console.log($("h1 span").text())
+
+$(".punch").hover(function(){
+    $("h1 span").css({    
+    "transform":"rotate(-90deg)"
+  })
+}, function(){
+    $("h1 span").css({    
+    "transform":"rotate(0deg)"
+  })
+})
 
 
-          url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR_ndDOt_GpWtoIL3r5EZBOvrIMLi7MQMcPJ8S8wtbFUIe-6hHvpOxvhaAEerWHMw/pub?gid=744057368&single=true&output=csv"
+
+
+//          url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR_ndDOt_GpWtoIL3r5EZBOvrIMLi7MQMcPJ8S8wtbFUIe-6hHvpOxvhaAEerWHMw/pub?gid=744057368&single=true&output=csv"
           url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR_ndDOt_GpWtoIL3r5EZBOvrIMLi7MQMcPJ8S8wtbFUIe-6hHvpOxvhaAEerWHMw/pub?gid=744057368&single=true&output=csv"
 
 
@@ -22,8 +41,8 @@ Papa.parse(url, {
               work = results.data[i].WorkTitle.replace(/(?:\r\n|\r|\n)/g, '<br>'),
               medium = results.data[i].Medium.replace(/(?:\r\n|\r|\n)/g, '<br>'),
               location = results.data[i].Location.replace(/(?:\r\n|\r|\n)/g, '<br>'),
-              img= $("<img class='thumbnail'>")
-                  .attr("src",results.data[i].Thumbnail.replace("open?","uc?")),
+              //img= $("<img class='thumbnail'>")
+                //  .attr("src",results.data[i].Thumbnail.replace("open?","uc?")),
               caption = results.data[i].ThumbnailCaption.replace(/(?:\r\n|\r|\n)/g, '<br>'),
               desc = results.data[i].ProjectDescription.replace(/(?:\r\n|\r|\n)/g, '<br>'),
               toolTitle = results.data[i].ToolTitle.replace(/(?:\r\n|\r|\n)/g, '<br>'),
@@ -40,7 +59,7 @@ Papa.parse(url, {
                   .append("<h4 class='workTitle'>"+work+'</h4>')
                   .append("<div class='medium'>"+medium+'</div>')
                   .append("<div class='location'>"+location+'</div>')
-                  .append(img)
+                  //.append(img)
                   .append("<p class='caption'>"+caption+'</div>')
 
                   .append("<div class='projectDescription'>"+desc+'</div>')
