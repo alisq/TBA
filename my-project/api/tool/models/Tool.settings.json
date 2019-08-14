@@ -1,0 +1,53 @@
+{
+  "connection": "default",
+  "collectionName": "tools",
+  "info": {
+    "name": "tool",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "ArtistName": {
+      "type": "string"
+    },
+    "ShortBio": {
+      "type": "string"
+    },
+    "WorkTitle": {
+      "type": "string"
+    },
+    "Medium": {
+      "type": "string"
+    },
+    "Location": {
+      "type": "string"
+    },
+    "Thumbnail": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "Caption": {
+      "type": "text"
+    },
+    "ProjectDescription": {
+      "type": "text"
+    },
+    "ToolTitle": {
+      "type": "string"
+    },
+    "ToolText": {
+      "type": "text"
+    },
+    "QuestionsandConversationStarters": {
+      "type": "text"
+    },
+    "CurricularConnections": {
+      "type": "text"
+    }
+  }
+}
