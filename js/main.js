@@ -103,8 +103,12 @@ Papa.parse(url, {
 
 let runningHeaders = Bindery.RunningHeader({
   render: (page) => page.isLeft
-    ? `${page.number} · TOOLS FOR LEARNING`
-    : `${$( "#"+id+' .title').text()} · ${page.number}`
+    //? `${page.number} · TOOLS FOR LEARNING`
+    ? ``
+    //: `${$( "#"+id+' .title').text()} · ${page.number}`
+
+: `<div class='recto-head'>Tools For Learning<br />Toronto Biennial of Art</div>`
+    
 });
 
 $('.makeBook').click(function(){
@@ -120,7 +124,7 @@ $('.makeBook').click(function(){
 
   pageSetup: {  
     size: { width: '5.5in', height: '8.5in' },
-    margin: { top: '0.625in', inner: '0.625in', outer: '0.375in', bottom: '0.375in' },
+    margin: { top: '1in', inner: '0.625in', outer: '0.375in', bottom: '0.375in' },
   },
   printSetup: {
     layout: Bindery.Layout.BOOKLET,

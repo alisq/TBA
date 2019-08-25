@@ -189,6 +189,20 @@ h1 span {
     
 }
 
+.📖-right .📖-running-header {
+
+    width: 4.5in;
+    padding-bottom:0.5em;
+    border-bottom:1px solid #000;
+}
+
+.recto-head {
+        font-size:14pt!important;
+        float:left;
+        letter-spacing:0.3em;
+}
+
+
 
 .📖-root {
 	color:#000;
